@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI产品经理30天课程表</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f766e'/%3E%3Cpath d='M9 11h14v2.4H9zM9 16h14v2.4H9zM9 21h9v2.4H9z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f4f6f9; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7c;
+    --line:#e2e8f0; --main:#1f3a68; --accent:#0f766e; --accent-soft:#e6f4f2;
+    --warn:#b45309; --tag:#eef2f7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;line-height:1.6;}
+  .wrap{max-width:1080px;margin:0 auto;padding:24px 16px 64px;}
+
+  /* header */
+  header.hero{background:linear-gradient(135deg,#1f3a68 0%,#234b6e 55%,#0f766e 100%);border-radius:16px;padding:32px 28px;color:#fff;margin-bottom:20px;}
+  .hero .kicker{display:inline-block;font-size:13px;letter-spacing:.12em;color:#bfe3df;border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;margin-bottom:14px;}
+  .hero h1{font-size:28px;font-weight:800;line-height:1.3;margin-bottom:8px;}
+  .hero p{font-size:15px;color:#d7e6ea;max-width:720px;}
+  .hero .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .hero .stat{background:rgba(255,255,255,.12);border-radius:10px;padding:8px 14px;font-size:13px;}
+  .hero .stat b{display:block;font-size:20px;font-weight:800;color:#fff;}
+
+  /* phase */
+  .phase{background:var(--card);border-radius:16px;padding:22px 20px;margin-bottom:18px;box-shadow:0 1px 3px rgba(16,42,67,.06);}
+  .phase-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--line);padding-bottom:12px;margin-bottom:14px;}
+  .phase-no{font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:8px;padding:2px 10px;white-space:nowrap;}
+  .phase-title{font-size:19px;font-weight:800;}
+  .phase-goal{font-size:13px;color:var(--sub);margin-left:auto;text-align:right;}
+
+  /* day list */
+  .days{display:grid;grid-template-columns:1fr;gap:12px;}
+  @media (min-width:820px){ .days{grid-template-columns:1fr 1fr;} }
+  .day{border:1px solid var(--line);border-radius:12px;padding:14px 14px 12px;background:#fbfcfe;display:flex;flex-direction:column;gap:8px;}
+  .day-top{display:flex;align-items:center;gap:10px;}
+  .day-num{flex:none;width:34px;height:34px;border-radius:9px;background:var(--main);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .day-title{font-size:15px;font-weight:700;line-height:1.35;}
+  .day-obj{font-size:13px;color:var(--sub);}
+  .res{display:flex;flex-direction:column;gap:4px;font-size:13px;}
+  .res a{color:var(--accent);text-decoration:none;border-bottom:1px dotted rgba(15,118,110,.4);}
+  .res a:hover{color:#0a5c56;border-bottom-style:solid;}
+  .res .tag{display:inline-block;width:26px;flex:none;color:#fff;background:var(--accent);border-radius:5px;font-size:11px;text-align:center;padding:1px 0;margin-right:6px;}
+  .res .tag.v{background:#1f6fb2;}
+  .res .tag.s{background:#8a63d2;}
+  .res div{display:flex;align-items:baseline;min-width:0;}
+  .res div span{min-width:0;overflow-wrap:anywhere;}
+  .task{margin-top:auto;background:var(--tag);border-radius:8px;padding:8px 10px;font-size:13px;}
+  .task b{color:var(--main);}
+  .task span{color:#3d4d5f;}
+
+  footer{font-size:12px;color:var(--sub);text-align:center;margin-top:8px;line-height:1.8;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="kicker">从测试开发到 AI 产品经理</span>
+  <h1>AI 产品经理 30 天课程表</h1>
+  <p>每天 1.5–2 小时：读 1 篇、看 1 节、逛 1 个站、交 1 个产出。六阶段覆盖能力六维（评测数据 / 技术理解 / 用户产品判断 / AI 交互 / 商业风险 / 跨团队协作），前 25 天攒作品、后 5 天练面试。</p>
+  <div class="stats">
+    <div class="stat"><b>30</b>天</div>
+    <div class="stat"><b>6</b>阶段</div>
+    <div class="stat"><b>60+</b>资源链接</div>
+    <div class="stat"><b>30</b>项产出</div>
+    <div class="stat"><b>1</b>套作品集</div>
+  </div>
+</header>
+
+<!-- ============ 阶段一 ============ -->
+<section class="phase" id="p1">
+  <div class="phase-head"><span class="phase-no">阶段一</span><span class="phase-title">AI PM 认知与岗位拆解</span><span class="phase-goal">Day 1–5 · 搞清楚这个岗要什么</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">1</span><div><div class="day-title">AI PM 是什么：岗位与能力模型</div><div class="day-obj">建立岗位全景，对照自己的差距</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">AI 产品经理岗位职责 2026：六类核心交付物（Offer库）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV1Xycrz4EfY/">B站：AI 大模型产品经理零基础全套（142 集·建认知）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.jobui.com/gangwei/aichanpinjingli/shanghai/">职友集：上海 AI PM 岗位与薪资统计</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写一页「AI PM 能力拆解」：从 JD 反推 6 个能力域，标注自己强弱</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">2</span><div><div class="day-title">AI PM 的核心交付物</div><div class="day-obj">把「懂大模型」翻译成可交付成果</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://bestpmjobs.com/resources/ai-product-manager-job-description">AI PM JD 模板 2026：职责与技能清单（Best PM Jobs）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV11fue6AEnq/">B站：AI 产品经理零基础全套（748 集·产品落地）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://learnetto.com/ai-guides/best-ai-product-management-courses">Learnetto：AI PM 课程索引与学习路线</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>列出 AI PM 的 6 类核心交付物（任务/评测集/兜底/门槛…）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">3</span><div><div class="day-title">把测试背景翻译成产品语言</div><div class="day-obj">认清优势与短板，写好转型叙事</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="http://hr.51testing.com/news/4209.html">51Testing：测试从业者转 AI PM 的优势与建议</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.woshipm.com/zhichang/5730271.html">人人都是产品经理：为什么测试转产品越来越难</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（AI 产品栏目）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>把 3 段过往评测经历改写为「产品叙事」，每段 100 字</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">4</span><div><div class="day-title">12 个月学习路径设计</div><div class="day-obj">给自己定节奏，避免学三个月不落地</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.institutepm.com/knowledge-hub/ai-pm-learning-journey-12-months">Institute of AI PM：零基础到 AI PM 的 12 个月路径</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://logicmojo.com/top-7-ai-courses-for-product-managers/">LogicMojo：2026 最值得学的 AI PM 课程排行</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.artificialintelligenceschool.com/programs/aipmpc">AI School AIPMPC：4 周冲刺课程大纲（作品导向）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>把 12 个月路径压缩成自己的 3/6/12 月计划</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">5</span><div><div class="day-title">看真实 JD：市场与薪资</div><div class="day-obj">用真实岗位校准目标与预期</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.liepin.com/a/80632633.shtml">猎聘：北京 AI 产品经理 20–35K JD（职责+要求）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://m.zhaopin.com/jobs/CC223800020J40786721608.htm">智联：AI 应用产品经理 JD（评测/成本/合规要求）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.jobui.com/gangwei/aichanpinjingli/shanghai/">职友集：上海 AI PM 学历/经验/薪资分布</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>列出 10 个目标岗位清单（公司/城市/薪资/硬性要求）</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 阶段二 ============ -->
+<section class="phase" id="p2">
+  <div class="phase-head"><span class="phase-no">阶段二</span><span class="phase-title">产品思维筑基</span><span class="phase-goal">Day 6–10 · 补最大短板</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">6</span><div><div class="day-title">需求分析与 AI PRD 结构</div><div class="day-obj">从问题到方案的第一步</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.woshipm.com/zhichang/6265403.html">人人都是产品经理：AI PM 万字复盘（作品集要素）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.artificialintelligenceschool.com/programs/aipmpc">AI School：AI PRD 应含的 8 个部分（模型/数据/评测/回滚）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（需求分析专栏）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>搭一个 AI PRD 模板（含评测集/成本/回滚三节）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">7</span><div><div class="day-title">用户研究与访谈</div><div class="day-obj">学会从用户视角找问题</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：作品集三件套（含用户访谈拆解）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://class.m.imooc.com/sale/aipm">慕课网：AI 产品经理特训营（需求与市场章节）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：用户与产品判断能力域详解</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>针对 1 个 AI 场景写 10 个用户访谈问题</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">8</span><div><div class="day-title">竞品分析与产品拆解</div><div class="day-obj">把「用过的产品」拆成「懂行的判断」</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：AI 产品 Teardown 五步结构（拆解）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV11fue6AEnq/">B站：AI 产品经理 748 集（竞品分析）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（竞品分析专栏）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>用五步结构拆解 1 个你常用的 AI 产品</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">9</span><div><div class="day-title">非 AI 基线思维：为什么用 AI</div><div class="day-obj">AI PM 面试高频题，也是产品判断核心</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：用户任务与非 AI 基线（JD 速查表）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://learnetto.com/ai-guides/best-ai-product-management-courses">Learnetto：AI 适用性判断与工作流设计</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.institutepm.com/knowledge-hub/understanding-rag">Institute of AI PM：RAG 指南（先理解检索边界）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>选 1 个场景写「为什么用 AI 而非规则/搜索/人工」分析</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">10</span><div><div class="day-title">原型与产品工具上手</div><div class="day-obj">会画原型，才算产品人</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：No-code 原型项目（Lovable/v0）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://class.m.imooc.com/sale/aipm">慕课网：AI 产品经理特训营（C/B 端设计原则）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.artificialintelligenceschool.com/programs/aipmpc">AI School：AIPMPC 原型周（vibe-coding 工作流）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>用 Figma/即时设计画出 1 个 AI 功能原型线框</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 阶段三 ============ -->
+<section class="phase" id="p3">
+  <div class="phase-head"><span class="phase-no">阶段三</span><span class="phase-title">AI 技术理解</span><span class="phase-goal">Day 11–15 · 能跟算法对得上话</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">11</span><div><div class="day-title">LLM 原理：Token/上下文/幻觉</div><div class="day-obj">建立模型能力边界的直觉</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://juejin.cn/post/7539351775045222451">掘金：Claude Code 提示工程入门（含 LLM 基础）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.tech-skills.org.cn/lesson/1827">工信部平台：AI 产品经理（高级）·AIGC 与大模型技术通识</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI 官方文档：Prompt Engineering 指南</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写一页「LLM 能力边界与产品影响」笔记</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">12</span><div><div class="day-title">Prompt 工程入门</div><div class="day-obj">官方方法论，不是玄学</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="http://m.toutiao.com/group/7662597724209955369/">OpenAI 官方 Prompt 指南中文对照（人人都是产品经理）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://juejin.cn/post/7384584198118621235">掘金：OpenAI 六大策略与教程盘点</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://cookbook.openai.com">OpenAI Cookbook（实战用例库）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写 5 个结构化 prompt（角色+任务+格式+边界）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">13</span><div><div class="day-title">Prompt 进阶：CoT / 少样本 / 自洽性</div><div class="day-obj">从「会写」到「写得好」</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="http://m.toutiao.com/group/7663330193746035238/">量子位：OpenAI 官方 8 招提示词技巧</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://juejin.cn/post/7539351775045222451">掘金：思考链/角色设定/链式提示</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api">OpenAI Help：Prompt 最佳实践原文</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写 3 个 CoT / 少样本 / 角色扮演 prompt 案例</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">14</span><div><div class="day-title">RAG：原理与产品应用</div><div class="day-obj">PM 最该吃透的架构模式</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.institutepm.com/knowledge-hub/understanding-rag">Institute of AI PM：RAG 完整指南（索引+查询双管线）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://class.m.imooc.com/sale/aipm">慕课网：AI 产品经理特训营（RAG 与知识库章节）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：技术理解能力域（RAG/工具调用）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>画 1 个 RAG 产品流程图（加载→切块→向量→检索→重排→生成）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">15</span><div><div class="day-title">Agent：ReAct / 工具调用 / MCP</div><div class="day-obj">2026 年 AI PM 的必答题</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="http://m.toutiao.com/group/7697192371217302031/">Claude 负责人万字长文：更有野心地用模型（含提示词）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：Agent 任务的产品指标与边界</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.artificialintelligenceschool.com/programs/aipmpc">AI School：AIPMPC Agent 周（自主性光谱）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写 1 个 Agent 产品的「自主性光谱」分析（什么时候不该上 Agent）</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 阶段四 ============ -->
+<section class="phase" id="p4">
+  <div class="phase-head"><span class="phase-no">阶段四</span><span class="phase-title">AI 产品设计 · 评测 · 指标</span><span class="phase-goal">Day 16–20 · 你的主战场</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">16</span><div><div class="day-title">AI 评测体系：评测集与评分规则</div><div class="day-obj">把测试能力升维成 PM 交付物</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：Eval Plan 五要素（定义好/测试集/评分/失败）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://class.m.imooc.com/sale/aipm">慕课网：AI 产品评测基本功（指标+报告）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.institutepm.com/knowledge-hub/understanding-rag">Institute of AI PM：RAG 评测数据集设计</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>设计 20 条评测集（典型/边界/对抗三类）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">17</span><div><div class="day-title">LLM-as-Judge 与红队测试</div><div class="day-obj">AI 质检的现代姿势</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：评分 Rubric 与失败归因</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.techademy.com/ai-product-manager-portfolio">Techademy：30 天 7 项目（Eval Set 项目）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://cookbook.openai.com">OpenAI Cookbook：评测相关用例</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写 5 条评分标准（pass/fail），每条附判定依据</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">18</span><div><div class="day-title">AI 交互设计：失败与兜底</div><div class="day-obj">AI 产品 UX 的灵魂在「出错时」</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：交互设计能力域（来源可见/拒绝/撤销）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV11fue6AEnq/">B站：AI 产品经理 748 集（AI 原生 UX）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：Teardown 之「UX of being wrong」</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>为 1 个 AI 功能设计失败恢复路径（重试/兜底/人工接管）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">19</span><div><div class="day-title">指标分层：模型 / 产品 / 业务</div><div class="day-obj">别把模型指标当产品指标</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：自测清单（区分模型指标/产品行为/业务结果）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://bestpmjobs.com/resources/ai-product-manager-job-description">Best PM Jobs：AI 影响指标定义（离线 vs 线上）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（指标与 A/B 专栏）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>为 1 个 AI 产品画三级指标树</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">20</span><div><div class="day-title">成本 / 延迟 / 风险模型</div><div class="day-obj">PM 要对每笔 Token 负责</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://bestpmjobs.com/resources/ai-product-manager-job-description">Best PM Jobs：成本管理与 Guardrails</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://m.zhaopin.com/jobs/CC223800020J40786721608.htm">智联 JD：Token 计费与 GPU 成本意识（真实要求）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.institutepm.com/knowledge-hub/understanding-rag">Institute of AI PM：RAG 成本与延迟权衡</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>算 1 个 AI 功能的单次调用成本模型（含缓存/重试）</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 阶段五 ============ -->
+<section class="phase" id="p5">
+  <div class="phase-head"><span class="phase-no">阶段五</span><span class="phase-title">作品集实战</span><span class="phase-goal">Day 21–25 · 用作品说话</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">21</span><div><div class="day-title">作品集规划：三件套怎么配</div><div class="day-obj">小产品 + 拆解 + Eval 方案</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.techademy.com/ai-product-manager-portfolio">Techademy：30 天 7 项目作品集（结构/托管）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：3 项目各证明什么（build/judgment/quality）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.institutepm.com/knowledge-hub/ai-pm-learning-journey-12-months">Institute of AI PM：作品集阶段（7–9 月）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>作品集目录 + 时间表（3 件作品各 3–5 天）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">22</span><div><div class="day-title">作品一：Eval Plan 评测方案</div><div class="day-obj">你最该出彩的一件，几乎现成</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：Eval Plan 完整写法（5 要素+例子）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.woshipm.com/zhichang/6265403.html">人人都是产品经理：作品集四要素（背景/方案/数据/迭代）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：评测案例怎么写（切片/严重失败/校准）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>Eval Plan 文档 v1（基于你真实做过的 LLM 产品）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">23</span><div><div class="day-title">作品二：AI 产品拆解</div><div class="day-obj">证明你的产品判断力</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：Teardown 五部分（任务/机制/错误 UX）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV1Xycrz4EfY/">B站：AI 大模型产品经理 142 集（产品案例）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（AI 产品拆解案例）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>1500 字拆解文：1 个 AI 产品的任务/机制/失败 UX</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">24</span><div><div class="day-title">作品三：小 AI 产品原型</div><div class="day-obj">动手做出一个能用的东西</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.techademy.com/ai-product-manager-portfolio">Techademy：Custom GPT 项目（3–5 天迭代）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://hellopm.co/ai-pm-portfolio-projects/">HelloPM：反馈分类器 Spec 例子</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.artificialintelligenceschool.com/programs/aipmpc">AI School：vibe-coding 原型（Lovable/v0/Bolt）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>用 Coze/自定义 GPT 搭 1 个 AI 应用，跑到能给别人用</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">25</span><div><div class="day-title">作品整合与发布</div><div class="day-obj">让招聘方 60 秒内看懂你</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.techademy.com/ai-product-manager-portfolio">Techademy：作品集托管与展示（个人站/Notion）</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.woshipm.com/zhichang/6265403.html">人人都是产品经理：一页纸作品集呈现法</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.institutepm.com/knowledge-hub/ai-pm-learning-journey-12-months">Institute of AI PM：作品集定位（3 案例 3 指标）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>作品集首页：3 个案例各 1 页，可公开访问</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 阶段六 ============ -->
+<section class="phase" id="p6">
+  <div class="phase-head"><span class="phase-no">阶段六</span><span class="phase-title">面试与投递</span><span class="phase-goal">Day 26–30 · 把能力卖出去</span></div>
+  <div class="days">
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">26</span><div><div class="day-title">简历改造：测开 → AI PM 叙事</div><div class="day-obj">3 条量化成果，而非职责列表</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="http://hr.51testing.com/news/4209.html">51Testing：转型建议（用产品语言描述能力）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV1Xycrz4EfY/">B站：AI 产品经理 142 集（简历与求职）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.liepin.com/a/80632633.shtml">猎聘：真实 AI PM JD（逐条对齐简历）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>简历 v2：3 条量化成果（如「评测集 500 条→召回率 +X%」）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">27</span><div><div class="day-title">面试题型与框架</div><div class="day-obj">产品设计 / 指标 / 估算 / RCA</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.woshipm.com/zhichang/6265403.html">人人都是产品经理：AI PM 面试考察点</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://bestpmjobs.com/resources/ai-product-manager-job-description">Best PM Jobs：AI PM 面试问题清单</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">Offer库：自测清单 9 问</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>写 5 个产品设计题的答题框架（问题-用户-方案-指标-风险）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">28</span><div><div class="day-title">Mock 面试：用 AI 练面试</div><div class="day-obj">录音复盘，练到敢开口</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.institutepm.com/knowledge-hub/ai-pm-learning-journey-12-months">Institute of AI PM：Mock 节奏（每周 2 次）</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.bilibili.com/video/BV11fue6AEnq/">B站：AI 产品经理 748 集（面试实战）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://www.woshipm.com">人人都是产品经理（面经专栏）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>用 ChatGPT/Claude 完成 1 次 mock，录音并写下 3 个改进点</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">29</span><div><div class="day-title">投递策略：JD 匹配与内推</div><div class="day-obj">先评测产品/质量平台产品，再转 AI 应用 PM</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.jobui.com/gangwei/aichanpinjingli/shanghai/">职友集：AI PM 学历/经验要求统计</a></span></div>
+        <div><span class="tag">读</span><span><a href="https://www.liepin.com/a/80632633.shtml">猎聘：北京 AI PM JD（逐条做匹配矩阵）</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://m.zhaopin.com/jobs/CC223800020J40786721608.htm">智联：AI 应用 PM JD（评测/成本要求）</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>做 5 个岗位的 JD 匹配表（要求 vs 你的证据）</span></div>
+    </div>
+
+    <div class="day">
+      <div class="day-top"><span class="day-num">30</span><div><div class="day-title">30 天复盘与下月计划</div><div class="day-obj">作品集定稿，进入投递节奏</div></div></div>
+      <div class="res">
+        <div><span class="tag">读</span><span><a href="https://www.institutepm.com/knowledge-hub/ai-pm-learning-journey-12-months">Institute of AI PM：求职阶段（10–12 月）执行细节</a></span></div>
+        <div><span class="tag">看</span><span><a href="https://www.tech-skills.org.cn/lesson/1827">工信部平台：AI 产品经理（高级）结课</a></span></div>
+        <div><span class="tag">站</span><span><a href="https://learnetto.com/ai-guides/best-ai-product-management-courses">Learnetto：继续进阶的资源索引</a></span></div>
+      </div>
+      <div class="task"><b>产出</b>：<span>30 天复盘（完成度/卡点）+ 下 30 天投递计划</span></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>本课程表基于 2026 年 AI PM 岗位能力模型与真实 JD 设计，所有链接为检索核验过的公开资源；付费课程请自行评估。</p>
+  <p>配套阅读：<a href="https://chanpinjingli.org/blog/blog-ai-pm-role-guide">AI PM 能力模型</a> · <a href="https://www.woshipm.com/zhichang/6265403.html">AI PM 转型复盘</a> · <a href="https://hellopm.co/ai-pm-portfolio-projects/">作品集指南</a></p>
+</footer>
+
+</div>
+</body>
+</html>
